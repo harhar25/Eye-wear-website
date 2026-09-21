@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --background: #fffdf8;
+  --foreground: #15181d;
+  --focus: #0e7c86;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+  color: var(--foreground);
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(247, 244, 238, 0.98)),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(14, 124, 134, 0.22);
+  color: #0b0d10;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.container-shell {
+  width: min(100% - 32px, 1180px);
+  margin-inline: auto;
+}
+
+.section-y {
+  padding-block: clamp(4rem, 8vw, 8rem);
+}
+
+.eyewear-frame {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 2.4 / 1;
+  margin-inline: auto;
+}
+
+.eyewear-frame::before,
+.eyewear-frame::after {
+  content: "";
+  position: absolute;
+  top: 18%;
+  width: 38%;
+  height: 64%;
+  border: 3px solid currentColor;
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+}
+
+.eyewear-frame::before {
+  left: 4%;
+}
+
+.eyewear-frame::after {
+  right: 4%;
+}
+
+.eyewear-frame span {
+  position: absolute;
+  left: 43%;
+  top: 48%;
+  width: 14%;
+  height: 3px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.shape-rectangle::before,
+.shape-rectangle::after {
+  border-radius: 8px;
+}
+
+.shape-round::before,
+.shape-round::after {
+  border-radius: 999px;
+}
+
+.shape-square::before,
+.shape-square::after {
+  width: 34%;
+  height: 66%;
+  border-radius: 9px;
+}
+
+.shape-aviator::before,
+.shape-aviator::after {
+  height: 72%;
+  border-radius: 54% 54% 62% 62%;
+  transform: skewX(-5deg);
+}
+
+.shape-cat-eye::before,
+.shape-cat-eye::after {
+  border-radius: 70% 28% 62% 42%;
+  transform: rotate(-5deg);
+}
+
+.shape-cat-eye::after {
+  transform: rotate(5deg) scaleX(-1);
+}
+
+.shape-oval::before,
+.shape-oval::after {
+  border-radius: 50%;
+  height: 58%;
+}
+
+.shape-browline::before,
+.shape-browline::after {
+  border-radius: 12px 12px 45% 45%;
+  border-top-width: 7px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
