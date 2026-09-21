@@ -286,15 +286,26 @@ export const faqs = [
   }
 ];
 
-// PLACEHOLDER_CONTACT: Replace these values with the business's official details before launch.
 export const contactDetails = {
   business: "Harold Jey Eyewear",
   owner: "Harold Jey Madjos",
-  phone: "Phone to be added",
-  email: "Email to be added",
-  facebook: "Facebook link to be added",
-  instagram: "Instagram link to be added",
-  address: "Physical address to be added"
+  phone: {
+    label: "09518422898",
+    href: "tel:+639518422898"
+  },
+  email: {
+    label: "haroldjeymadjos@gmail.com",
+    href: "mailto:haroldjeymadjos@gmail.com"
+  },
+  facebook: {
+    label: "just.make.it.nice",
+    href: "https://www.facebook.com/just.make.it.nice"
+  },
+  instagram: {
+    label: "@haroldmadjos",
+    href: "https://www.instagram.com/haroldmadjos/"
+  },
+  address: "Sibagat, Agusan del Sur"
 };
 
 export const footerCategories = [

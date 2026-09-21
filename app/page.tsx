@@ -23,6 +23,10 @@ const structuredData = {
   },
   description: siteConfig.description,
   url: siteConfig.url,
+  telephone: contactDetails.phone.label,
+  email: contactDetails.email.label,
+  address: contactDetails.address,
+  sameAs: [contactDetails.facebook.href, contactDetails.instagram.href],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Eyewear categories",

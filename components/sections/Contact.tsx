@@ -6,10 +6,22 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const contactRows = [
   { label: "Owner", value: contactDetails.owner, icon: UserRound },
-  { label: "Phone", value: contactDetails.phone, icon: Phone },
-  { label: "Email", value: contactDetails.email, icon: Mail },
-  { label: "Facebook", value: contactDetails.facebook, icon: Facebook },
-  { label: "Instagram", value: contactDetails.instagram, icon: Instagram },
+  { label: "Phone", value: contactDetails.phone.label, href: contactDetails.phone.href, icon: Phone },
+  { label: "Email", value: contactDetails.email.label, href: contactDetails.email.href, icon: Mail },
+  {
+    label: "Facebook",
+    value: contactDetails.facebook.label,
+    href: contactDetails.facebook.href,
+    external: true,
+    icon: Facebook
+  },
+  {
+    label: "Instagram",
+    value: contactDetails.instagram.label,
+    href: contactDetails.instagram.href,
+    external: true,
+    icon: Instagram
+  },
   { label: "Physical Address", value: contactDetails.address, icon: MapPin }
 ];
 
@@ -41,7 +53,18 @@ export function Contact() {
                         <Icon aria-hidden="true" className="h-4 w-4" />
                         <p className="text-xs font-bold uppercase tracking-[0.18em]">{row.label}</p>
                       </div>
-                      <p className="mt-3 break-words text-base font-semibold text-white">{row.value}</p>
+                      {row.href ? (
+                        <a
+                          href={row.href}
+                          target={row.external ? "_blank" : undefined}
+                          rel={row.external ? "noreferrer" : undefined}
+                          className="mt-3 inline-block break-words text-base font-semibold text-white underline decoration-white/25 underline-offset-4 transition hover:decoration-white"
+                        >
+                          {row.value}
+                        </a>
+                      ) : (
+                        <p className="mt-3 break-words text-base font-semibold text-white">{row.value}</p>
+                      )}
                     </div>
                   );
                 })}

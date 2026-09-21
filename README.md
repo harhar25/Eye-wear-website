@@ -39,11 +39,12 @@ npm run build
 Copy `.env.example` to `.env.local` and set:
 
 ```bash
-NEXT_PUBLIC_JOTFORM_URL=
+NEXT_PUBLIC_JOTFORM_URL=https://form.jotform.com/Madjos/find-your-perfect-pair-of-eyeglass
+NEXT_PUBLIC_JOTFORM_ID=262635038031046
 NEXT_PUBLIC_SITE_URL=
 ```
 
-`NEXT_PUBLIC_JOTFORM_URL` can be either a full Jotform URL or a form ID. If it is empty, the site shows a polished setup placeholder in the form section.
+The current public form URL and ID are also centralized as defaults in `lib/config.ts`, so the form works immediately. Set both Jotform variables in Vercel when replacing the form later. Only public Jotform values belong in these variables.
 
 ## Jotform and n8n
 
@@ -70,7 +71,7 @@ The UI reads from this data file, so future inventory can be connected to a CMS 
 
 ## Replace Contact Information
 
-Edit the `contactDetails` object in `data/site.ts`. Placeholder values are marked with `PLACEHOLDER_CONTACT`.
+Edit the centralized `contactDetails` object in `data/site.ts`. Phone, email, and social links are rendered as accessible links in the contact section and footer.
 
 ## Replace Images
 
@@ -82,7 +83,7 @@ If you use new remote image hosts, add them to `next.config.mjs`.
 
 1. Push the project to a Git repository.
 2. Import the repository into Vercel.
-3. Add `NEXT_PUBLIC_JOTFORM_URL` in Vercel project environment variables.
+3. Add `NEXT_PUBLIC_JOTFORM_URL` and `NEXT_PUBLIC_JOTFORM_ID` in Vercel project environment variables.
 4. Add `NEXT_PUBLIC_SITE_URL` using the production domain.
 5. Deploy.
 
@@ -93,6 +94,6 @@ If you use new remote image hosts, add them to `next.config.mjs`.
 - Run the production build with `npm run build`.
 - Test the mobile navigation.
 - Test hash-link smooth scrolling.
-- Confirm the Jotform placeholder and embed behavior.
-- Replace placeholder company contact values before launch.
+- Confirm the Jotform loading, responsive embed, and direct-form fallback behavior.
+- Confirm the company contact links before launch.
 - Review legal pages before production use.

@@ -48,10 +48,37 @@ export function Footer() {
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/[0.55]">Contact</h2>
           <ul className="mt-4 space-y-3 text-sm text-white/[0.72]">
-            <li>{contactDetails.phone}</li>
-            <li>{contactDetails.email}</li>
-            <li>{contactDetails.facebook}</li>
-            <li>{contactDetails.instagram}</li>
+            <li>
+              <a className="break-words transition hover:text-white" href={contactDetails.phone.href}>
+                {contactDetails.phone.label}
+              </a>
+            </li>
+            <li>
+              <a className="break-words transition hover:text-white" href={contactDetails.email.href}>
+                {contactDetails.email.label}
+              </a>
+            </li>
+            <li>
+              <a
+                className="transition hover:text-white"
+                href={contactDetails.facebook.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a
+                className="transition hover:text-white"
+                href={contactDetails.instagram.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>{contactDetails.address}</li>
           </ul>
         </div>
       </div>

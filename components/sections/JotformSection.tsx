@@ -11,7 +11,7 @@ export function JotformSection() {
           <ScrollReveal className="min-w-0">
             <div className="lg:sticky lg:top-28">
               <SectionHeader
-                eyebrow="Personalized eyewear form"
+                eyebrow="Personalized Eyewear Recommendations"
                 title="Let's Find Your Perfect Pair"
                 description="Tell us your style, preferred frame, and budget, and we'll help you find eyewear that fits you."
               />
