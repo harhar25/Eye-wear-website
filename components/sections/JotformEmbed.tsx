@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AlertCircle, ExternalLink, LoaderCircle } from "lucide-react";
+import { AlertCircle, CheckCircle2, ExternalLink, LoaderCircle } from "lucide-react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
-type EmbedStatus = "loading" | "ready" | "error";
+type EmbedStatus = "loading" | "ready" | "error" | "complete";
 
 const jotformOrigin = "https://form.jotform.com";
 
@@ -90,12 +90,16 @@ export function JotformEmbed() {
       const [action, value] = event.data.split(":");
 
       switch (action) {
+        // Jotform's thank-you view can retain the full form height.
+        case "submission-completed":
+          setStatus("complete");
+          break;
         case "setHeight": {
           const nextHeight = Number.parseInt(value, 10);
 
           if (Number.isFinite(nextHeight) && nextHeight >= 480 && nextHeight <= 12000) {
             setIframeHeight(nextHeight);
-            setStatus("ready");
+            setStatus((current) => current === "complete" ? current : "ready");
           }
           break;
         }
@@ -128,6 +132,22 @@ export function JotformEmbed() {
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
   }, []);
+
+  if (status === "complete") {
+    return (
+      <div
+        className="min-w-0 rounded-lg border border-charcoal/10 bg-white px-6 py-10 shadow-card sm:px-10"
+        role="status"
+        aria-live="polite"
+      >
+        <CheckCircle2 aria-hidden="true" className="h-10 w-10 text-teal" />
+        <h3 className="mt-5 font-display text-3xl text-charcoal">Thank you!</h3>
+        <p className="mt-3 max-w-md text-base leading-7 text-ink/70">
+          Your inquiry was submitted. We&apos;ll review your preferences and contact you using the details you provided.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div
