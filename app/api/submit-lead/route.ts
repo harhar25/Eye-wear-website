@@ -56,7 +56,7 @@ export async function POST(request: Request) {
 
   // Quietly accept bot-filled honeypot submissions without forwarding them.
   if (parsed.data.website) {
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ success: true });
   }
 
   const webhookUrl = getWebhookUrl();
@@ -80,11 +80,15 @@ export async function POST(request: Request) {
     });
 
     if (!response.ok) {
-      console.error("n8n webhook rejected a lead.", { status: response.status });
+      const responseBody = await response.text();
+      console.error("n8n webhook rejected a lead.", {
+        status: response.status,
+        body: responseBody
+      });
       return NextResponse.json({ error: "Lead service is temporarily unavailable." }, { status: 502 });
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Unable to deliver lead to n8n.", error instanceof Error ? error.message : "Unknown error");
     return NextResponse.json({ error: "Lead service is temporarily unavailable." }, { status: 502 });
