@@ -35,10 +35,10 @@ export function Contact() {
               <SectionHeader
                 eyebrow="Contact"
                 title={contactDetails.business}
-                description="For the best eyewear recommendation, send an inquiry through the form and include your preferred style, use case, frame shape, and budget."
+                description="For the best eyewear recommendation, complete the consultation and share your preferred style, use case, frame shape, and budget."
                 theme="dark"
               />
-              <ButtonLink href="#find-your-pair" variant="light" className="mt-8">
+              <ButtonLink href="#consultation" variant="light" className="mt-8">
                 Send an Inquiry
               </ButtonLink>
             </ScrollReveal>

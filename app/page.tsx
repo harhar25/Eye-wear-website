@@ -1,4 +1,5 @@
 import { About } from "@/components/sections/About";
+import { ConsultationSection } from "@/components/sections/ConsultationSection";
 import { Contact } from "@/components/sections/Contact";
 import { CustomerExperience } from "@/components/sections/CustomerExperience";
 import { EyewearCategories } from "@/components/sections/EyewearCategories";
@@ -7,7 +8,6 @@ import { FeaturedProducts } from "@/components/sections/FeaturedProducts";
 import { FrameShapes } from "@/components/sections/FrameShapes";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { JotformSection } from "@/components/sections/JotformSection";
 import { StyleGallery } from "@/components/sections/StyleGallery";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { categories, contactDetails, products } from "@/data/site";
@@ -64,7 +64,7 @@ export default function Home() {
       <FeaturedProducts />
       <WhyChooseUs />
       <HowItWorks />
-      <JotformSection />
+      <ConsultationSection />
       <About />
       <CustomerExperience />
       <FAQ />

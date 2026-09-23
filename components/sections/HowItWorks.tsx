@@ -15,10 +15,10 @@ export function HowItWorks() {
             <SectionHeader
               eyebrow="How it works"
               title="Three steps from style idea to stronger shortlist."
-              description="Visitors submit preferences through the online eyewear form so recommendations can be based on taste, use case, frame shape, and budget."
+              description="A guided consultation captures your taste, use case, frame shape, and budget so every recommendation has a clear reason behind it."
               theme="dark"
             />
-            <ButtonLink href="#find-your-pair" variant="light" className="mt-8">
+            <ButtonLink href="#consultation" variant="light" className="mt-8">
               Start My Eyewear Search
             </ButtonLink>
           </div>

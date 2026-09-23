@@ -86,7 +86,7 @@ export function Hero() {
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.78, ease: [0.22, 1, 0.36, 1], delay: 0.26 }}
           >
-            <ButtonLink href="#find-your-pair" variant="light">
+            <ButtonLink href="#consultation" variant="light">
               Find Your Perfect Pair
             </ButtonLink>
             <ButtonLink href="#styles" variant="secondary" className="border-white/20 bg-white/10 text-white hover:bg-white/[0.18] hover:text-white">

@@ -14,7 +14,7 @@ export function EyewearCategories() {
             description="Browse core eyewear categories now, then submit your preferences so Harold Jey Eyewear can help narrow the right direction."
           />
           <a
-            href="#find-your-pair"
+            href="#consultation"
             className="inline-flex text-sm font-semibold text-teal transition hover:text-charcoal"
           >
             Start with recommendations

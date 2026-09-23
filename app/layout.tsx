@@ -12,14 +12,19 @@ export const metadata: Metadata = {
     template: "%s | Harold Jey Eyewear"
   },
   description:
-    "Discover stylish eyeglasses, blue-light glasses, reading glasses, sunglasses, and modern frames from Harold Jey Eyewear. Tell us your style and let us help you find your perfect pair.",
+    "Discover stylish eyeglasses and personalized eyewear recommendations from Harold Jey Eyewear. Start a custom eyewear consultation to find your perfect pair.",
+  keywords: [
+    "custom eyewear consultation",
+    "personalized eyewear recommendations",
+    "eyeglasses style consultation"
+  ],
   alternates: {
     canonical: "/"
   },
   openGraph: {
     title: "Harold Jey Eyewear | Stylish Eyeglasses & Frames",
     description:
-      "Discover stylish eyeglasses, blue-light glasses, reading glasses, sunglasses, and modern frames from Harold Jey Eyewear.",
+      "Explore stylish frames and start a custom eyewear consultation for personalized recommendations from Harold Jey Eyewear.",
     url: "/",
     siteName: "Harold Jey Eyewear",
     type: "website",
@@ -36,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Harold Jey Eyewear | Stylish Eyeglasses & Frames",
     description:
-      "Tell us your style and let Harold Jey Eyewear help you find your perfect pair.",
+      "Take an eyeglasses style consultation and let Harold Jey Eyewear help you find your perfect pair.",
     images: [eyewearImages.hero.src]
   },
   robots: {

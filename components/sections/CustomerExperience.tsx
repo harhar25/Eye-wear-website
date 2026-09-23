@@ -19,7 +19,7 @@ const benefits = [
   },
   {
     title: "Cleaner follow-up",
-    description: "The form creates a more organized lead flow for Jotform and future n8n automation.",
+    description: "Your answers arrive together, making the follow-up more focused and easier to continue.",
     icon: ClipboardCheck
   },
   {
@@ -80,7 +80,7 @@ export function CustomerExperience() {
                 </p>
               </div>
             )}
-            <ButtonLink href="#find-your-pair" variant="light" className="mt-6">
+            <ButtonLink href="#consultation" variant="light" className="mt-6">
               Get personalized options
             </ButtonLink>
           </div>

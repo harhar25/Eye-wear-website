@@ -234,7 +234,7 @@ export const processSteps = [
   {
     step: "01",
     title: "Tell Us Your Style",
-    description: "Share your preferred look, frame shape, use case, and budget through the online form."
+    description: "Share your preferred look, frame shape, use case, and budget through the guided consultation."
   },
   {
     step: "02",
@@ -252,32 +252,32 @@ export const faqs = [
   {
     question: "How do I choose the right frame?",
     answer:
-      "Start with your face shape, daily routine, preferred style, and budget. The eyewear form collects those details so recommendations can be more focused."
+      "Start with your face shape, daily routine, preferred style, and budget. The eyewear consultation collects those details so recommendations can be more focused."
   },
   {
     question: "Can you help me decide which style suits me?",
     answer:
-      "Yes. Submit your preferences through the form and Harold Jey Eyewear can suggest styles that match your taste and intended use."
+      "Yes. Share your preferences through the consultation and Harold Jey Eyewear can suggest styles that match your taste and intended use."
   },
   {
     question: "Do you offer prescription eyeglasses?",
     answer:
-      "Prescription eyeglasses are part of the eyewear categories shown on this site. Final prescription handling details should be confirmed through the inquiry form."
+      "Prescription eyeglasses are part of the eyewear categories shown on this site. Final prescription handling details should be confirmed during follow-up."
   },
   {
     question: "Do you sell blue-light glasses?",
     answer:
-      "Yes, blue-light eyewear is included as a category. Use the form to share your screen-use needs and preferred frame style."
+      "Yes, blue-light eyewear is included as a category. Use the consultation to share your screen-use needs and preferred frame style."
   },
   {
-    question: "How will you contact me after I submit the form?",
+    question: "How will you contact me after I submit the consultation?",
     answer:
-      "Harold Jey Eyewear will use the contact details you provide in the form. Add your preferred contact method when submitting your inquiry."
+      "Harold Jey Eyewear will use the contact details you provide in the consultation. Add a phone number if you would also like to be contacted by phone."
   },
   {
     question: "Can I ask for recommendations based on my budget?",
     answer:
-      "Yes. The form is designed to collect budget preferences so recommendations can stay realistic and useful."
+      "Yes. The consultation includes budget preferences so recommendations can stay realistic and useful."
   },
   {
     question: "How long does it take to receive a response?",

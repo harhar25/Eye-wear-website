@@ -108,7 +108,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <ButtonLink
-            href="#find-your-pair"
+            href="#consultation"
             variant={isScrolled ? "primary" : "light"}
             className="min-h-11 px-5"
           >
@@ -150,7 +150,7 @@ export function Navbar() {
                   {item.label}
                 </a>
               ))}
-              <ButtonLink href="#find-your-pair" className="mt-2 w-full" onClick={() => setIsOpen(false)}>
+              <ButtonLink href="#consultation" className="mt-2 w-full" onClick={() => setIsOpen(false)}>
                 Find Your Perfect Pair
               </ButtonLink>
             </nav>

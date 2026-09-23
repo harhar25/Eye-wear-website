@@ -14,7 +14,7 @@ export function FeaturedProducts() {
             title="Sample products ready for real inventory."
             description="These placeholder products are structured in a data file so names, pricing, materials, and photos can be replaced cleanly later."
           />
-          <ButtonLink href="#find-your-pair" variant="secondary">
+          <ButtonLink href="#consultation" variant="secondary">
             Ask for a recommendation
           </ButtonLink>
         </div>

@@ -19,13 +19,12 @@ export default function PrivacyPage() {
               before launch.
             </p>
             <p>
-              The website is designed to direct visitors to a Jotform inquiry. Any personal information submitted
-              through that form should be handled according to the finalized business privacy policy and Jotform
-              configuration.
+              The website collects consultation details so Harold Jey Eyewear can provide personalized frame
+              recommendations and follow up using the contact information submitted by the visitor.
             </p>
             <p>
-              Do not place n8n webhook secrets, private automation credentials, or sensitive operational data in
-              frontend code.
+              Consultation data is relayed through a protected server endpoint. Finalize the business&apos;s retention,
+              access, and deletion practices before replacing this placeholder policy.
             </p>
           </div>
         </div>
